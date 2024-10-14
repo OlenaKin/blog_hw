@@ -1,10 +1,63 @@
-import React, { useState } from 'react';
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+
+// function Navigation() {
+//   return (
+//     <nav className="nav-links">
+//       <Link to="/">Home</Link>
+//       <Link to="/about">About</Link>
+//       <Link to="/contact">Contact</Link>
+//     </nav>
+//   );
+// }
+
+// function Header({ blogName }) {
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setMenuOpen(!menuOpen);
+//   };
+
+//   return (
+//     <header className="header">
+//       <div className="header__container">
+//         {/* Blog name section */}
+//         <div className="header__blogName">
+//           <h1>{blogName}</h1>
+//         </div>
+
+//         {/* Hamburger menu button for mobile */}
+//         <button className="hamburger" onClick={toggleMenu}>
+//           ☰
+//         </button>
+
+//         {/* Navigation menu: Apply 'active' class when menu is open */}
+//         <nav className={`nav ${menuOpen ? "active" : ""}`}>
+//           <ul>
+//             <li>
+//               {/* Replace <a> with <Link> for proper routing */}
+//               <Link to="/">Home</Link>
+//             </li>
+//             <li>
+//               <Link to="/about">News</Link>
+//             </li>
+//             <li>
+//               <Link to="/contact">Contact</Link>
+//             </li>
+//           </ul>
+//         </nav>
+//       </div>
+//     </header>
+//   );
+// }
+
+// Header.jsx
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header({ blogName }) {
-  
   const [menuOpen, setMenuOpen] = useState(false);
 
-  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -12,26 +65,22 @@ function Header({ blogName }) {
   return (
     <header className="header">
       <div className="header__container">
-      <div className="header__blogName">
+        <div className="header__blogName">
           <h1>{blogName}</h1>
         </div>
-
-        {/* Hamburger menu button for mobile */}
         <button className="hamburger" onClick={toggleMenu}>
           ☰
         </button>
-
-        {/* Conditionally apply 'active' class based on menuOpen state */}
-        <nav className={menuOpen ? "nav active" : "nav"}>
+        <nav className={`nav ${menuOpen ? "active" : ""}`}>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/news">News</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -40,4 +89,4 @@ function Header({ blogName }) {
   );
 }
 
-export default Header;
+export default Header; // Ensure you export Header as default

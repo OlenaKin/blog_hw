@@ -2,7 +2,7 @@ import React from "react";
 // import Header from "../../components/Header";
 
 import Banner from "../../components/Banner";
-import Blog from "../../components/Blog";
+import BlogItem from "../../components/BlogItem";
 import NewsItem from "../../components/NewsItem";
 
 /*function Home() {
@@ -76,8 +76,26 @@ function Home() {
       <Banner />
       <div className="content-container">
         <div className="blog__container">
-          <Blog
-            title="Lorem ipsum"
+          <BlogItem
+            title="Lorem Lorem"
+            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit saepe
+          iure laudantium quidem! Vel quis rem recusandae adipisci laboriosam id
+          eligendi a nisi? Autem id illo animi doloribus, minus totam. Lorem, ipsum
+          dolor sit amet consectetur adipisicing elit. Repellat facilis adipisci
+          illum dolores perferendis id quasi ex minima eum libero aut quisquam
+          commodi, exercitationem sit harum repudiandae dolorem itaque ad."
+          />
+          <BlogItem
+            title="Lorem Lorem2"
+            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit saepe
+          iure laudantium quidem! Vel quis rem recusandae adipisci laboriosam id
+          eligendi a nisi? Autem id illo animi doloribus, minus totam. Lorem, ipsum
+          dolor sit amet consectetur adipisicing elit. Repellat facilis adipisci
+          illum dolores perferendis id quasi ex minima eum libero aut quisquam
+          commodi, exercitationem sit harum repudiandae dolorem itaque ad."
+          />
+          <BlogItem
+            title="Lorem Lorem3"
             content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit saepe
           iure laudantium quidem! Vel quis rem recusandae adipisci laboriosam id
           eligendi a nisi? Autem id illo animi doloribus, minus totam. Lorem, ipsum
